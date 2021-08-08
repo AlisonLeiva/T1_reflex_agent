@@ -1,32 +1,99 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="reflex_agent.css" />
-  </head>
-  <body>
-    <div style="display: flex; justify-content: center">
-      <div>
-        A
-        <hr />
-        <img id="trashL" style="width: 200px; height: 150px" />
-      </div>
-      <div>
-        B
-        <hr />
-        <img id="trashR" style="width: 200px; height: 150px" />
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>reflex_agent_201700378</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <div style="display: flex; justify-content: center">
-      <div>
-        <img id="aspiradoraL" style="width: 200px; height: 200px" />
-      </div>
-      <div>
-        <img id="aspiradoraR" style="width: 200px; height: 200px" />
-      </div>
-    </div>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    <h2>Reflex agent</h2>
-    <p id="log"></p>
-    <script type="text/javascript" src="reflex_agent.js"></script>
-  </body>
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 500px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #F1E3D5;
+  overflow-x: hidden;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <p id="log"></p>
+</div>
+
+<div class="content" style="height: 100vh; display : flex;flex-direction: column; align-items: center; justify-content: center;">
+  <div style="display: flex; justify-content: center; align-content: center;">
+    <div>
+      A
+      <hr />
+      <img id="trashL" style="width: 200px; height: 150px" />
+    </div>
+    <div>
+      B
+      <hr />
+      <img id="trashR" style="width: 200px; height: 150px" />
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center;align-content: center;">
+    <div>
+      <img id="aspiradoraL" style="width: 200px; height: 200px" />
+    </div>
+    <div>
+      <img id="aspiradoraR" style="width: 200px; height: 200px" />
+    </div>
+  </div>
+
+   <br>
+  <table style="width: 25%; align-items: center;">
+    <tr>
+      <th>Estado</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+
+    <tr>
+      <th>Cantidad</th>
+      <td><p id="estado1">0</p></td>
+      <td><p id="estado2">0</p></td>
+      <td><p id="estado3">0</p></td>
+      <td><p id="estado4">0</p></td>
+      <td><p id="estado5">0</p></td>
+      <td><p id="estado6">0</p></td>
+      <td><p id="estado7">0</p></td>
+      <td><p id="estado8">0</p></td>
+    </tr>
+  </table>
+ 
+</div>
+
+<script type="text/javascript" src="reflex_agent.js"></script>
+
+</body>
 </html>
